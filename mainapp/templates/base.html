@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Ритуальные удовольствия</title>
+
+  <!-- Bootstrap core CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+
+<body >
+    <style>
+        body {
+  padding-top: 56px;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+    </style>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">Ритуальные удовольствия</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Главная</a>
+          </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Все гробы
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+
+              <a class="dropdown-item" href="{% url 'coffins_list' %}">Все гробы</a>
+            </div>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'request' %}">Заявки</a>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">О компании</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    {% block content %}
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('{% static 'mainapp/123.jpg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 style="color: white;">ПАКЕТ "ЭКОНОМ"</h3>
+            <p style="color: black;">
+            <ul>
+          <p>· Гроб обитый тканью и подушка</p>
+          <p>· Набор постельного и погребальный набор</p>
+          <p>· Крест деревянный, тумба</p>
+            <p>· Табличка металлическая</p>
+          <p>· Подготовка усопшего к погребению (омывание, одевание, грим)</p>
+          <p>· Получение врачебного и гербового свидетельства о смерти</p>
+          <p>· Организация отпевания</p>
+          <p>· Поиск поминального стола</p>
+        </ul>
+            </p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'mainapp/123.jpg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>ПАКЕТ "СТАНДАРТ"</h3>
+              <p>· Гроб деревянный комбинированный и подушка</p>
+          <p>· Набор постельного и погребальный набор</p>
+          <p>· Крест деревянный, тумба</p>
+            <p>· Табличка металлическая</p>
+          <p>· Подготовка усопшего к погребению (омывание, одевание, грим)</p>
+          <p>· Получение врачебного и гербового свидетельства о смерти</p>
+          <p>· Организация отпевания</p>
+          <p>· Поиск поминального стола</p>
+            <p>· Аренда ритуального зала 45 мин</p>
+            <p>· Хранение в холодильной камере 1 сут</p>
+            <p>· Доставка покойного в морг</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'mainapp/mem.jpg' %}')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 style="color: black;">ПАКЕТ "ЭЛИТНЫЙ"</h3>
+            <p style="color: black;">Все по ГОСТу и красиво.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">Ритуальные услуги в Минске</h1>
+    <h4 class="my-4">Здесь ты можешь:</h4>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Услуги</h4>
+          <div class="card-body">
+            <p class="card-text">
+              <p>· Аренда ритуального зала 45 мин</p>
+              <p>· Хранение в холодильной камере 1 сут</p>
+              <p>· Доставка покойного в морг</p>
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Ознакомиться с полным перечнем услуг</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Товары</h4>
+          <div class="card-body">
+            <p class="card-text">При со стола любой кулинарный изыск, царапай и шипи на всех, гадь в тапки. Всё равно тебя будут любить!</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Ознакомиться с полным перечнем товаров</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Цены</h4>
+          <div class="card-body">
+            <p class="card-text">Просмотреть цены</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Ознакомиться с полным перечнем цен</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
+    <h2>Отзывы</h2>
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Андрей, 34 года</a>
+            </h4>
+            <p class="card-text">Хочу поблагодарить команду за профессиональный подход к работе. Месяц назад умерла бабушка и мне понадобилась перевозка ее тела из-за рубежа в Минск. Менеджеры подготовили все необходимые для перевозки документы и разрешения. Мне не пришлось во всем этом разбираться. </p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Лариса, 28 лет</a>
+            </h4>
+            <p class="card-text">Отец ушел из жизни ночью. Мы обратились за помощью к менеджерам. Уже через час при личной встречи обсудили дальнейшие шаги. Ребята помогли с документами, организовали достойные похороны. Большое спасибо за искреннее сочувствие и помощь.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Алисия, 41 год</a>
+            </h4>
+            <p class="card-text">Жизнь невозможна без потерь. Эта известная всем поговорка приобретает совсем другой смысл, когда коснется лично – смерть забирает человека, без которого не представляли себе жизни. В трудный час расставания пришлось думать о том, куда обратиться за помощью, чтобы отправить в последний путь родителей. Ведь похороны – это особенный момент прощания с покойным. В болезненный момент потери обратились за помощью в организацию похорон. Порадовало внимание менеджеров, сострадание и качественное обслуживание. Цены также приемлемые особенно учитывая, то что нам необходимо было хоронить сразу двух человек.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Пётр, 56 лет</a>
+            </h4>
+            <p class="card-text">Хочется поблагодарить сотрудников агенста за чёткую организацию похорон. В этот трудный жизненный момент благодаря этим людям всё прошло без заминок. Спасибо водителю за спокойный проезд к месту захронения. Хочется отметить, что цены на ритуальные принодлежности оказались ниже чем в магазинах. Спасибо Вам за работу.</p>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Марина, 26 лет</a>
+            </h4>
+            <p class="card-text">Спасибо огромное агентству за организацию похорон. Пришёл к выводу что всем должны заниматься профессионалы своего дела. Агентство работает слаженно,профессионально и самое главное не дорого. Очень было приятно наблюдать за их работой,хоть в этот день было и не до этого. Самое главное очень помогаете людям пережить свои самые трудные часы в жизни и взять всё хлопоты по проведению похорон. Огромное человеческое спасибо за вашу работу.</p>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Василий, 56 лет</a>
+            </h4>
+            <p class="card-text">Спасибо Вам огромное за проделанную работу и достойную организацию похорон близкого человека! Работники похоронного бюро проявили себя с лучшей стороны и ответственно. Спасибо агенту, который в сложные минуты помогал здраво принимать решение. Спасибо!</p>
+          </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Почему мы?</h2>
+        <p> Первым на выезд приезжает ритуальный агент, в обязанности которого входит:</p>
+        <ul>
+          <li> оперативное прибытие после вызова;</li>
+          <li> предоставление полноценной и достоверной информации родственникам усопшего по организации похорон и наличию участков под захоронение;</li>
+          <li> профессиональное содействие в подборе ритуального сервиса (оформление документации, перевозка тела и прочее).</li>
+        </ul>
+        <p>При выполнении всех перечисленных мероприятий соблюдается ритуальная этика в соответствии с пожеланиями и вероисповеданиями родственников, которые заказали услугу. Кроме того, ритуальный агент всегда поддержит морально.</p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="{% static 'mainapp/tayammum.png' %}" alt="">
+      </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <p>Центр похоронной помощи готов взять на себя все обязательства по профессиональной организации похорон и захоронению, при этом полностью избавив родственников от забот. На вызов приезжает специально подготовленный и опытный персонал, который предоставит безупречный сервис.</p>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-lg btn-secondary btn-block" href="{% url 'request' %}">Оставить заявку</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+{% endblock content %}
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy;  Ритуальные удовольствия 2021</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

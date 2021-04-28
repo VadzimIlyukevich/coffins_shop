@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">О компании
+      <small></small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Главная</a>
+      </li>
+      <li class="breadcrumb-item active">О компании</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'mainapp/name.jpg' %}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2>Наша компания</h2>
+        <p>Наша компания на рынке ритуальных услуг уже более 8 лет. За время своей работы мы заслужили репутацию партнера, которому можно довериться в самые трудные дни. На сегодняшний день мы – постоянно развивающаяся компания, предлагающая широкий спектр ритуальных услуг и принадлежностей. Работая напрямую с производителями, мы готовы предложить высокое качество, а также самые низкие цены на ритуальные товары и принадлежности, по сравнению с другими ритуальными компаниями.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+        <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'mainapp/christmas-angel.png' %}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2>Простое решение сложной задачи</h2>
+        <p>Похороны – событие, которое далеко не всегда планируется заранее. В эти сложные дни лучше доверить решение организационных вопросов профессионалам, не нагружать близких утомительной суетой. Вне зависимости от того бюджета, который выделен на похороны, мы гарантируем качественный подход к организации прощания с дорогим вам человеком. Просто выберете необходимые услуги из предлагаемого ассортимента.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+    <h2>Почему нужно выбрать наше агентство?</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'mainapp/realtor.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Комфорт</h4>
+            <h6 class="card-subtitle mb-2 text-muted">25/8</h6>
+            <p class="card-text">Круглосуточная консультация. Мы готовы оказать вам помощь 24 часа в сутки 7 дней в неделю.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'mainapp/funeral.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Удобство</h4>
+            <h6 class="card-subtitle mb-2 text-muted">С душой</h6>
+            <p class="card-text">Деликатное отношение. В нашей работе мы обращаем внимание на каждую деталь. Делаем все максимально идеально и правильно!</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'mainapp/rip-headstone.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Понимание</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Участие</h6>
+            <p class="card-text">Индивидуальный подход. Учтем все ваши пожелания при прощании с близким человеком.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+{% endblock content %}
